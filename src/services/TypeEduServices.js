@@ -18,7 +18,7 @@ export class TypeEduServices {
   }
 
   async delete(id) {
-    const res = await axios.delete(`${baseUrl}/type-edu/delete`, { _id: id });
+    const res = await axios.post(`${baseUrl}/type-edu/delete`, { _id: id });
     return res.data;
   }
 

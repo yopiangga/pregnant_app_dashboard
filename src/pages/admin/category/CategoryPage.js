@@ -53,13 +53,12 @@ export function CategoryPage() {
       title: "",
       description: "",
     });
-
-    navigate("/");
   };
 
   const handleDelete = async (data) => {
     setLoading(true);
     const res = await typeEduServices.delete(data[0]);
+    fetch();
 
     setLoading(false);
 
