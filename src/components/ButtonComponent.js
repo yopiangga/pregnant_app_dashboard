@@ -49,3 +49,14 @@ export function Btn3Active(props) {
     </button>
   );
 }
+
+export function ButtonSubmit(props) {
+  return (
+    <button
+      type="submit"
+      className="py-3 pl-5 pr-5 mr-2 mt-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-md border-indigo-300"
+    >
+      {props.title}
+    </button>
+  );
+}
