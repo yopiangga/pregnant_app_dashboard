@@ -12,6 +12,9 @@ import { MotherEditPage } from "./mother/MotherEditPage";
 import { ArticleAddPage } from "./article/ArticleAddPage";
 import { ArticlePage } from "./article/ArticlePage";
 import { ArticleEditPage } from "./article/ArticleEditPage";
+import { VideoPage } from "./video/VideoPage";
+import { VideoAddPage } from "./video/VideoAddPage";
+import { VideoEditPage } from "./video/VideoEditPage";
 
 export default function AdminRouterPage() {
   return (
@@ -20,6 +23,15 @@ export default function AdminRouterPage() {
         <div className="bg-gray-100 p-6 mt-16 w-10/12 text-dark">
           <Routes>
             <Route path="/" element={<HomePage />} exact />
+          </Routes>
+          <Routes>
+            <Route path="/video" element={<VideoPage />} exact />
+          </Routes>
+          <Routes>
+            <Route path="/video/buat" element={<VideoAddPage />} exact />
+          </Routes>
+          <Routes>
+            <Route path="/video/edit" element={<VideoEditPage />} exact />
           </Routes>
           <Routes>
             <Route path="/artikel" element={<ArticlePage />} exact />
