@@ -4,7 +4,7 @@ export function Btn1Active(props) {
   return (
     <button
       onClick={props.onTap}
-      className="text-grey-900 bg-cyellow-300 rounded-md border text-xs border-cyellow-300 font-medium px-5 h-8"
+      className={`text-${props.text} bg-${props.bg} rounded-md border text-xs border-${props.bg} font-medium px-5 h-8`}
     >
       {props.title}
     </button>

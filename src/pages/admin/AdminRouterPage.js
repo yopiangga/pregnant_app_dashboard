@@ -7,6 +7,11 @@ import { CategoryAddPage } from "./category/CategoryAddPage";
 import { HomePage } from "./HomePage";
 import { ProfilePage } from "./ProfilePage";
 import { CategoryEditPage } from "./category/CategoryEditPage";
+import { MotherPage } from "./mother/MotherPage";
+import { MotherEditPage } from "./mother/MotherEditPage";
+import { ArticleAddPage } from "./article/ArticleAddPage";
+import { ArticlePage } from "./article/ArticlePage";
+import { ArticleEditPage } from "./article/ArticleEditPage";
 
 export default function AdminRouterPage() {
   return (
@@ -17,10 +22,16 @@ export default function AdminRouterPage() {
             <Route path="/" element={<HomePage />} exact />
           </Routes>
           <Routes>
-            <Route path="/kategori" element={<CategoryPage />} exact />
+            <Route path="/artikel" element={<ArticlePage />} exact />
           </Routes>
           <Routes>
-            <Route path="/kategori/edit" element={<CategoryEditPage />} exact />
+            <Route path="/artikel/buat" element={<ArticleAddPage />} exact />
+          </Routes>
+          <Routes>
+            <Route path="/artikel/edit" element={<ArticleEditPage />} exact />
+          </Routes>
+          <Routes>
+            <Route path="/kategori" element={<CategoryPage />} exact />
           </Routes>
           <Routes>
             <Route
@@ -29,6 +40,16 @@ export default function AdminRouterPage() {
               exact
             />
           </Routes>
+          <Routes>
+            <Route path="/kategori/edit" element={<CategoryEditPage />} exact />
+          </Routes>
+          <Routes>
+            <Route path="/ibu" element={<MotherPage />} exact />
+          </Routes>
+          <Routes>
+            <Route path="/ibu/edit" element={<MotherEditPage />} exact />
+          </Routes>
+
           <Routes>
             <Route path="/akun" element={<ProfilePage />} exact />
           </Routes>

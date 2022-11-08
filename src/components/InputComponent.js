@@ -31,6 +31,40 @@ export function InputComponentDefault({
   );
 }
 
+export function InputComponentSelect({
+  id,
+  title,
+  onChange,
+  value,
+  data,
+  required,
+}) {
+  return (
+    <div className="my-5">
+      <label
+        htmlFor={id}
+        className="block mt-2 text-xs font-semibold text-gray-600 uppercase"
+      >
+        {title}
+      </label>
+      <select
+        id={id}
+        name={id}
+        className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+        onChange={onChange}
+      >
+        {data.map((item, index) => {
+          return (
+            <option key={index} value={item}>
+              {item.title}
+            </option>
+          );
+        })}
+      </select>
+    </div>
+  );
+}
+
 export function InputComponentTextarea({
   id,
   title,

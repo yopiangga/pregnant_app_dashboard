@@ -29,6 +29,10 @@ export function CategoryAddPage() {
     setData({ ...data, [event.target.name]: event.target.value });
   }
 
+  function handleChangeIndex(event) {
+    setData({ ...data, index: parseInt(event.target.value) });
+  }
+
   async function handleSubmit(event) {
     event.preventDefault();
     const typeEdu = new TypeEduServices();
@@ -91,7 +95,7 @@ export function CategoryAddPage() {
                 id="index"
                 title="Index Kategori"
                 type="number"
-                onChange={handleChange}
+                onChange={handleChangeIndex}
                 placeholder="Masukkan index kategori"
                 value={data.index}
                 required={true}

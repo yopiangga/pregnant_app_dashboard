@@ -15,6 +15,7 @@ import DistrictRouterPage from "./pages/district/DistrictRouterPage";
 const auth = getAuth(app);
 
 const queryClient = new QueryClient();
+const userServices = new UserServices();
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function UserManager() {
   async function fetch() {
     onAuthStateChanged(auth, async function (users) {
       if (users) {
-        const resUser = await UserServices.getUser(users.email);
+        const resUser = await userServices.getUser(users.email);
         setUser(resUser[0]);
         setLoad(false);
       } else {
